@@ -1,27 +1,39 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
 header {
-    background-color: #333;
+    background-color: #ffffff;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.logo img,
-.menu-icon img {
-    max-width: 50px; /* Ajustez la taille de l'icône selon vos besoins */
+.logo img {
+    max-width: 50px; /* Ajustez la taille du logo selon vos besoins */
     height: auto;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
+.menu-icon img {
+    max-width: 30px; /* Ajustez la taille de l'icône du menu selon vos besoins */
+    height: auto;
+}
+.menu-icon {
+    text-decoration: none; /* Supprimer la soulignement par défaut du lien */
 }
 
+
+/*
+.header--bg {
+    background-color: #ffffff;
+}
+.header__logo-link,
+.header__menu-btn {
+    position: absolute;
+}
+
+.header__logo-link {
+    top: var(--space2x);
+    left: var(--space2x);
+}
+
+.header__menu-btn {
+    top: var(--space2x);
+    right: var(--space2x);
+  }
