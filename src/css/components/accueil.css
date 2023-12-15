@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+}
+
+nav img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centrer l'image horizontalement */
+}
+
+figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+section {
+    /* Styles pour la section restent inchangés */
+    padding: 20px;
+}
+
+footer {
+    /* Styles pour le pied de page restent inchangés */
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles spécifiques à la page d'accueil */
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+/* Ajoutez d'autres styles spécifiques à la page d'accueil si nécessaire */
