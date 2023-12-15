@@ -14,3 +14,6 @@
 @import "layout/header.css";
 
 /*règle de composent */
+@import"accueil.css";
+@import"billeterie.css";
+@import"header.css";
