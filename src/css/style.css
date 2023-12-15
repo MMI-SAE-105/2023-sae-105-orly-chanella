@@ -12,8 +12,10 @@
 
 /*règle de layout */
 @import "layout/header.css";
+@import "layout/footer.css";
 
 /*règle de composent */
 @import"accueil.css";
 @import"billeterie.css";
 @import"header.css";
+@import"oeuvre.css";
