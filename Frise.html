@@ -1,121 +1,148 @@
-<!--DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="frise.css">
-    <title>Frise</title>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <a href="index.html">
-            <img src="public/icones/logo.svg" alt="logo line & space">
-        </a>
-        </div>
-        <div class="menu-icon">
-            <a href="menu.html" class="menu-button">
-            <img src="public/icones/Vector.svg" alt="icone menu">
-            </a>
-        </div>
-        </header>
-  <h1>Chronologie des oeuvres</h1> 
-  <div>
-    <ul>
-        <li>
-            <img src="public/img/Frises/frise1.webp" alt="parc de la villette">
-        </li>
-        <li>
-            <img src="public/img/Frises/frise2.webp" alt="salle des concerts">
-        </li>
-        <li>
-            <img src="public/img/Frises/frise3.webp" alt="ecole d'architecture">
-        </li>
-        <li>
-            <img src="public/img/Frises/frise4.webp" alt="centre d'athlétisme">
-        </li>
-        <li>
-            <img src="public/img/Frises/frise5.webp" alt="Musée acropole">
-        </li>
-        <li>
-            <img src="public/img/Frises/frise6.webp" alt="Musée et parc archéologique">
-        </li>
-        <li>
-            <img src="public/img/Frises/frise7.webp" alt="Tour résidentielle">
-        </li>
-    </ul>
-  </div> 
-  <footer>
-    <p>2024 Line & Space</p>
-    
-    <nav>
-        <ul>
-            <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="billeterie.html">BILLETERIE</a></li>
-            <li><a href="oeuvres.html">OEUVRES</a></li>
-        </ul>
-    </nav>
-    
-    <p>Projet réalisé dans le cadre d'une situation d'apprentissage et d'évaluation au département MMi de Montbéliard</p>
-</footer>
-</body>
-</html-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="frise.css">
-    <title>Line & Space - Frise Chronologique</title>
+    <style>
+       .carrousel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .carrousel_btn {
+            margin: 10px;
+
+        }
+
+        .carrousel_parent-ecrans {
+            display: flex;
+            overflow-x: scroll;
+            width: 100%;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+        }
+        
+        .caroussel_liste-liens {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+       .carrousel {
+            position: relative;
+        }
+
+        .carrousel_ecran {
+            flex: 0 0 100%;
+            width: 100%;
+            scroll-snap-align: start;
+        }
+
+        .caroussel_liste-liens {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+    
+        }
+
+        .carrousel_btn {
+              position: absolute;
+              top: 50%;
+             top: calc(
+             min(500px, 100vw) / 16 * 9 / 2 + 1rem
+             ); /* centre verticalement ~50% vertical */
+              transform: translateY(-50%); /* methode du point mort */
+             width: 2rem;
+             height: 2rem;
+             background: rgba(0,0,0,0.5);
+             border-radius: 50%;
+             border: none;
+             display: grid;
+             place-content: center;
+             color: #fff;
+         }
+
+      .carrousel_btn-avant {
+           left: 0;
+       }
+
+       .carrousel_btn-apres {
+           right: 0;
+         }
+
+        </style>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Document</title>
 </head>
+
 <body>
-
-    <header>
-        <!-- Votre en-tête ici -->
-    </header>
-
-    <section class="carrousel">
-        <div class="slide">
-        <img src="public/img/Frises/frise1.webp" alt="Parc de la Villette, Paris">
-    <p>Parc de la Villette,
-        Paris</p>
-    </div>
-    <div class="slide">
-        <img src="public/img/Frises/frise2.webp" alt="Musée de l'Acropole">
-    <p>Salle de Concerts et Parc des Expositions de Rouen</p>
-    </div>
-    <div class="slide">
-        <img src="public/img/Frises/frise3.webp" alt="ecole d'architecture">
-       <p>École d'architecture, CRF</p> 
-    </div>
-    <div class="slide">
-        <img src="public/img/Frises/frise4.webp" alt="centre d'athlétisme">
-        Centre d'athlétisme, Université de Cincinnati
-    </div>
-    <div class="slide">
-        <img src="public/img/Frises/frise5.webp" alt="Musée acropole">
-      <p>Musée de l'Acropole    </p>  
-    </div>
-    <div class="slide">
-        <img src="public/img/Frises/frise6.webp" alt="Musée et parc archéologique">
-       <p>Musée et parc archéologique d'Alésia</p> 
-    </div>
-    <div class="slide">
-        <img src="public/img/Frises/frise7.webp" alt="Tour résidentielle">
-        <p>Tour résidentielle BLEUE</p>
-    </div>
-
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
-    </section>
-
-    <footer>
-        <!-- Votre pied de page ici -->
-    </footer>
-
-    <script src="frise.js"></script>
+    <div class="carrousel" x-data="{}">
+        <button class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant"
+            @click="p= $refs.parent ; p.scrollLeft += p.clientWidth"
+        >
+            &lt;
+        </button>
+        <button class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">
+            >
+        </button>
+        <div class="carrousel_parent-ecrans" x-ref="parent">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/Frises/frise1.webp" alt="image ecran 1">
+                    <figcaption>Parc de la Villette,
+                        Paris</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/Frises/frise2.webp" alt="image ecran 2">
+                    <figcaption>Salle de Concerts et Parc des Expositions de Rouen</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/Frises/frise3.webp" alt="image ecran 3">
+                    <figcaption>École d'architecture, CRF</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-4" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/Frises/frise4.webp" alt="image ecran 4">
+                    <figcaption>Centre d'athlétisme, Université de Cincinnati</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-5" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/Frises/frise5.webp" alt="image ecran 5">
+                    <figcaption>Musée de l'Acropole
+                    </figcaption>
+                </figure>
+            </div>
+            <div id="ecran-5" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/Frises/frise6.webp" alt="image ecran 5">
+                    <figcaption>Musée et parc archéologique d'Alésia</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-5" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/Frises/frise7.webp" alt="image ecran 5">
+                    <figcaption>Tour résidentielle BLEUE</figcaption>
+                </figure>
+            </div>
+        </div>
+        <ul class="caroussel_liste-liens">
+            <li><a href="#ecran-1" class="caroussel_lien">ecran 1</a></li>
+            <li><a href="#ecran-2" class="caroussel_lien">ecran 2</a></li>
+            <li><a href="#ecran-3" class="caroussel_lien">ecran 3</a></li>
+            <li><a href="#ecran-4" class="caroussel_lien">ecran 4</a></li>
+            <li><a href="#ecran-5" class="caroussel_lien">ecran 5</a></li>
+        </ul>
+    </div> 
 </body>
 </html>
