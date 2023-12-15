@@ -5,23 +5,16 @@ body {
 }
 
 header {
-    position: relative;
-}
-
-nav {
+    background-color: #ffffff;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 10px;
-    color: white;
 }
 
 nav img {
-    max-width: 100%;
+    max-width: 50px;
     height: auto;
-    display: block;
-    margin: 0 auto; /* Centrer l'image horizontalement */
 }
 
 figcaption {
@@ -32,27 +25,6 @@ figcaption {
     text-align: center;
     color: white;
     font-size: 24px;
-}
-
-section {
-    /* Styles pour la section restent inchangés */
-    padding: 20px;
-}
-
-footer {
-    /* Styles pour le pied de page restent inchangés */
-    padding: 10px;
-    text-align: center;
-}
-
-a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 /* Styles spécifiques à la page d'accueil */

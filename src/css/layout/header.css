@@ -18,22 +18,3 @@ header {
     text-decoration: none; /* Supprimer la soulignement par défaut du lien */
 }
 
-
-/*
-.header--bg {
-    background-color: #ffffff;
-}
-.header__logo-link,
-.header__menu-btn {
-    position: absolute;
-}
-
-.header__logo-link {
-    top: var(--space2x);
-    left: var(--space2x);
-}
-
-.header__menu-btn {
-    top: var(--space2x);
-    right: var(--space2x);
-  }
